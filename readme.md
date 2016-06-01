@@ -1,4 +1,4 @@
-Reveal JS is a small dependency-free image library to create tiny image previews that load in an instant. 
+Reveal JS is a dependency-free image library to create image previews that load in an instant. 
 
 Inspiration was drawn from Facebook and Medium where tiny placeholder images are rendered blurry, until the actual full-size completes loading. This technique greatly reduces perceived load time, and gives page visitors a glimpse of an image instead of a blank space.
 
@@ -17,8 +17,7 @@ While decoding an image the keys are mapped to their respective color values. Th
 A simple test with 23 coloured images (3.5MB) lead to a combined preview transfer size of 9KB compressed. Because its a string all 23 images can be transferred as a single file.
 
 # Usage
-## Examples
-### Creating a preview image
+## Creating a preview image
 An image preview is created using reveal.create(), the encoded string passed to a callback function, from where it can be uploaded the server to be stored. 
 
 Alternatively, an existing base64-encoded thumbnail image can be passed to an image decoding method (below), which leads to the same result.
@@ -51,7 +50,7 @@ function callback(image, meta){
 }
 ```
 
-### Decoding a preview image
+## Decoding a preview image
 Reveal JS has three methods for generating an image from an encoded data-string. It accepts both a Reveal JS propitiatory string and a base64-encoded image, note that the latter does not affect the dimensions (quality) of the preview image.
 
 Methods to decode a preview image are; .base64(), .canvas(), and .image(). These methods are identical except for the first argument passed to the callback function.
@@ -89,10 +88,10 @@ function callback(result, meta){
 }
 ```
 
-### Retrieving image meta-data
+## Retrieving image meta-data
 To get the image properties a Reveal JS data-string can be passed to `reveal.meta(string)`. This returns an object with the image meta data. The object is identical to the meta-object passed to method callback functions.
 
-### Checking for browser support
+## Checking for browser support
 Reveal JS relies on canvas support, this can be checked using `reveal.support`.
 
 # Performance
