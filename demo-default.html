@@ -1,0 +1,528 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Reveal JS Demo - Default</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>var manifest = [{"src":"https://i.imgur.com/1QfmBQQ.jpg","data":"#a2927c614:409,0KgygxghgxcgcgYPx/tCtAsvxjxlYPQ6d6pPpQtPxilCgykxcQcgxkxRfYb2jpWofpWXsupjI5h7pOpOtPgygxgxchsJf2f2f2GWg4fGfYanWoWnx/MPQxlSpkgxchcgtUSYs4npfpT01oKXo2x7SYWoSXYhlUpktlkychgxWnX3sZj111IMIKGGfp66o3b1Sog6lUpk//YPcgx/scWoroCWGmoI11hAEL11P1wtWoSXLt//lBggcg//WojYnnCG8H811HlSIv40g5xBOWSntlxkpCggU8x/b2OYGHDHMKSofYhBYcOH40sbjXOW//x/YOcfPtxlsbf2k3L240OWKY0040j3rsSoo4//hUpTpBgxcgcgx/sMKHnZfos1ans1GH01fJbIKH//pThCtUQ8gxYPxl//bYjYOHwZj1fsfIosaoOY//M8xlYhgylTPulCYOx/////Soo1b0WmOHKG////x/QA//kypUUQx/PuY8PstU////////////////Lex/YhYyplxl"},{"src":"https://i.imgur.com/NiS7IEI.jpg","data":"#71675d570:375,0JXqY5XqTqcLTZcKXqg7c4bpc6xTTaPLTac5g3gJLKPaTrPKTZTZLKPLCXgOc8g78YXaTcTbTKXtP3PLTcXbPbPKLKPKXsowTbkPH4g7XpPLPKPbLcPMTaTaTqTbTaTtTsPcbsPL8rXtXbTaPKTtTcPsPcTbXrTaLK4YD5TaTbXaL3L4P3kgXpL2PJYPTcPcY5cQcNY4Tc40Ttg7L3GYCYCYL4PrL4PaY6TrXrc6cNY5c7Y8H5H3CYL4PLTbGpCYXcgOkhghgQcPgfgfkggggggPCpL4CYPbGqGpCY41c8gPgPc8c8gfgfXsc7cfY74H8HTcL5L4L4HMCqXtgfkxkggPc7Xsc7TtTdY7PKPKTcH4GqCpCY4Hc8c8Y8U6Pcc6GpXtPLTcGpTcL4GqCpCZCpGpYQTcH3H3L4PLL3L4LKL3H3L3H3LKGpCp8Y8YLKggL4PcPdLLPcU9YhYiYiYiYichTLCY8XH4CoL4UAQAURUQUAQA"},{"src":"https://i.imgur.com/2Na9toD.jpg","data":"#8f766e1620:1080,0sg8gOgOg8gOgOofowogkgkPgOowkOkfg8c7c7TbP4g8kPc7gOg8gOkPkPgOkfofofogkPkfbtbskOofkPkOg8g8kPbtg8kOkOkPbtg7g8g8kPkPkPg8kfkPogkOgOc7TcTcgOkPgOkOkOkfkfkPkfkOg8ogoggPkfkggOkPkfkfkOkPgPkPkPkPg7btbtXtg7btbtg7g8kOkPg8btXsc7btbtkfofofg7kPogkOg8gOgOkPg8kgkfkOkfkfowofoggOXsgOgPg8c7xStBoxkfkPkfoggOXsc7c7g7TcXsc7kfXtg7kPg8ofbsTcXcXcTbbtc8ogowgOkegOkPg8kfkOgOgOg8gOgOTbc7g8c7kPkPkfc8ogkOgOkOofc7Xcbtc7kPgOkOc7gOgOXcg8ofXs/jtCg8PLkOg8g7kfbtXtkOgOkfofc7owkfkPgPkPofofofkPkPgOkfgOkOkOTcTbXsPLg7XskPkfkfkfc7XtXcc7c7TcXsbtbtg7kOgOkfofsxgPbtkPbtc7kfkfgOkObtkOkPXsgOoftCogkfbtogogowkfkPkfkOg8g8g8gOgOkPTbXcgOg7btc7kPofkPkfXcPLTcXcogg8c8sxxBowg8swkgg7g8ogofofofofofofkOg8kfkPg8ofofkOkPofofc7kfgOg8g7g7c7ofXcPKkPofofkPkfkfofswc7c8c7Xsbtc7kfkOowsxogkPkOkPogkgg7kOkOg7swg8swowkPg8kPgObtg7ofkOofkOkPogkfofg7kOgOc7c7g8TbXckPofkfkOowogY8XtTcTckOkOk7k7ofogg7kPkPkfg7XcsxgPXckOg8g8bsg8kPofofofswg7XsgObsPLg7kOofTbkPswowkOswswog/QkfkPowg7g8g8ogoxTdbtoNPcc8XtXtXcXcbtkPkOg8XcXbTbxSkPg8kfbtPLPLbtkfkOswkPkOPLL4TLXtg8XcTbg8H3c7Xbogg8kPofwwbsgPowkPkggPg6kOTLoNoOTcTdTdPMPLPLPLLLTcg8c7g7L4g7/jbtbtTbTcTbTbXsg7TbXsbsbsTcTbPLbtofgOkOofofoeofofbtbtowkfkfoxg8gPkPbsg7KpL3sNXtPcPMXsPLbsk7k6brk6bsg7ofXcxB/SXckOTcGpPLXcPLL3c8TLbtbtL4GpPLPKPK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"},{"src":"https://i.imgur.com/WKaRvJA.jpg","data":"#391b01670:679,0NzWzWzWzWzWzWzWzWzWzW0000nGf0b0X0T0X0X0jGvWzWzWzWzWzWzWzWzWzWzWKG00000000b0X0X0T0OmOmSmf0nGvWzWzWzWzWzWzWzWzW000000000000X0X0X0T0SmSmX0b0nGzWzWzWzWzWzWzWvX00LI0000U300X0X0X0X0X0X0X0X0b0zWzWzWzWzWzWzWvn40l500008X0000X0X0X0X0X0T0T0T0zWzWzWzWzWzm+00000000000000000X0X0X0X0X0X0X0T0zWzWzWzm+0+0+G0000000000000000X0X0X0X0X0T0T0SmzWzm+0+G+Gw0nm0000000000000000T0SmSmSmSmOmOmOmzm+0w0s0nmjWfGbI00000000000000OmOmSmOmOmOmOmOmvmnWjWfGjG00b0X00000000000004000000000008G00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"},{"src":"https://i.imgur.com/RXEY1nk.jpg","data":"#7e8694651:1200,0MLMLdLdLdPdPtPuPuPuTuTuTuTuPuPuPuPuPdLdLdLNLNLdPdPuPuTuTuU8U8U8U9U8U8U8U8U8U8TuTuPuPdLdLdPtPuTuU8U8Y9Y9Y9YPYPYPYPYPYPY9Y9Y9U8U8TuPtPeTuU8U8Y9YPYPcPcPcQcQcQcQcQcQcPcPYPYPY9U8U8TuU8Y9YPYPcQcgcgcgggggggggggggggcgcgcPYPYPY9U8YPYPcQcgcggggggxgxkxkxkxkxkxgxggggcgcgcPYPY9cPcgcggggxkxkxkxlBlBlBlBlBlBkxkxkxgxggggcgcPcggggwkxkxlBlBpCpCpCpCpCpCpCpCpBlBkxkxgwggcggggxkxlBpCpCpSpStStStStStStSpSpSpCpClBkxgxggkxkxlBpCpStStStTtjtjtjtjtjtjtTtStSpSpClBkxgxkxpBpCpStStTtjxjxjxjxjxjxjxjxjtjtTtSpSpClBkxpBpCtStTtTxjxjxjxjx+x+x+x+xjxjxjHND6tSpSpClCpCtStTtjD6HNx+/+/+/+/+/+/+/+/+DM8r8rtjtSpSpCpStStjxjU9UAHN/+/+/+/+/+/+/+pTYRHN8rxjtjtSpStStjxjxjHNUAD6Pv/+/+/+/+/+xk8rD64aLexjxjtTtStSxjxjx+YQLe8rCslCYPpCcxchLeD64bPvD6x+xjtjtTtTxjxj/+LeUAD68rYQYRchgxYQ8r4a8r8rLe/+xjxjtTtjxjx+/+lCHND68rYRPvLuUAHNLOYQLND64a/+x+xjtjtjxjx+/+tT8MKvTBXPU9HOchchr9040404gy/+x+xjtjxjxjx+/+448L8LKerR01LdD68b4M04030402/+xzxjtjxjxjx+/+44448LOfONCcghD6CM4N04030403tjx+xjxjxjxjx+/+4b8M8LGLKMchxjgh4q0504044L4Jxjx+xjxjtjxjx+/+pCUA44CL4atT4a0IlC8b0403Le8axjxkxjtjtTxjxjxktTchLu8rpSpCpCtTkyY9H64Z4a4a/+xjxjtTtSxjxjx+tjTvY9kxgyYh8rgygyYRLN0K4a4ax+xjxjtStStjxjxjpTghcilC8r4aLeD64a4bCs0J4a4atjxjtTtSpStStTxjgxPvYAU9HN8rD64a4a0J4J0J4J4a8qtjtTpSpCpStStTcgUA8r8s8r8r8r4a4J4J4a4a0J0J4atSpSpCpBpCtStSHNchU9DM4a0J0I0I020IPe4aYQU9HNpSpClBkxpBpClBLeYQLuYQ8r4J4J0I0I4J4a8r8a4J4a4rpBkxkxkxpBkxUALeHd8rHN4a4J0J0J0J8r4a8r4a4a0J96gxgggxkxgxcgY9HNHNH74a8a0J4a4K4a4aD68r4a4a4aggcggggwcgPvD5CrD68r8r4a0J8r0J4rHN8r8r4a4a0JH7cPcQcgcgYQPvD5D64aD68rHN8rD6D74aD60J4Z4a4J4aYPYPcPY9U9PvHNHN8r4aD58rD60JCr4a4a8r4a4J4Z4aU8Y9YPY9PuPuHNPuHN4aD68q8r4a0J4K4a8a4a4J0J4JTuU8U9TuPdHMLdH6Cs8rLe0J4a8r4a4a4a4a4a4J4J4aPtPuTuLdPuHNHM8r8rD64a8r8r0J4K0J4a4a4J4a4J4aLdLdPtHMLdHND58r4a8rCs4a4J4a4a8b4a4a4a4J4J4aLNLdLdD6HMD6HM4a4a8r8r4a4a8r4K4a4J4a4Z4K4Z4a"},{"src":"https://i.imgur.com/MvhEZ.jpg","data":"#cbc1b3395:540,0D00XtgN/kY7pAkfc7cOcOkvxRtS00/kxk/+/k/k/k/+/kxjxjgN/k00/ksd/+se/k/+/kXrxAsd/k/k00/k/+/k/+/k/k/kcPxjxj/k/k00/k/k/k/k/k/k/kcP/k/k/k/k00/k/k/k/k/k/k/kPc/k/+/k/k00/k/k/k/k/k/k/kLbgNtS/kxj00/k/k/ktApBtC/jLLxjxkxS/k00/kowpBxkxAnqtSswc7/kGo/k00/kx9tB/kLK/kLL/kgOc8/ktB00kfgP/k/itB/k/k/k/jPb/+/k00svxjwx/kxj/+x9g6/k/kgOTt00/k/kLKH3ow/k/k/k/kow/kkw00gP/kxjXs/kTbxS/ktCke/kY700sw/kGpgf/k/kxj/j/j/ktBTc00c6Y7/k/kXr/kk5/k/k/k/kke00kw/jsexRtCoxnq/kxjxj/kc700/k/jxj/j/jxjjZxjXsXs8Xxj"},{"src":"https://66.media.tumblr.com/9a907a73d4d2b8d500683aa0e4a6c5c4/tumblr_o4unhlCDgy1qhvtlqo1_1280.jpg","data":"#a6a6a6858:1280,0TtTtTxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxktTtTtTxkxkxktTxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxktTxktTtTtTtTtTxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxktTtTxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxk//xkxkxkxkxkxkxktTtTtTtTxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxktTtTxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxktTxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxktTtTxktTxkxkxkxkxkxkxk//xkxkxkxkxkxkxk//xkxkxkxkxkxkxkxkxktTxktTxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxk//xkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxk//xkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxkxktTtTxkxkxkxktTxkxkxkxkxkxkxkxkxkxkxkxkxkxktTxktTxkxktTtTtTtTtTxktTxktTtTtTtTxkxkxkxkxkxkxkxkxkxkxktTtTtTtTtTxktTtTtTtTtTtTtTtTtTtTtTtTtTxkxktTxkxktTxktTtTtTtTtTtTtTtTtTtTpCpCpCpCpCtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTtTpCpCpCpCtTpCpCpCpCpCpCtTpCtTtTtTtTtTtTtTtTtTtTtTtTtTtTpCpCpCkxpCpCpCpCpCpCpCpCpCpCpCpCpCpCtTtTtTtTtTtTtTtTtTtTpCpCpCpCggkxkxkxkxpCpCpCpCpCpCpCpCpCpCpCpCtTtTtTtTpCtTpCpCpCpCpCpCggkxkxkxkxpCpCpCkxpCpCpCpCpCpCpCpCpCtTtTpCpCpCpCpCpCpCpCpCggggkxkxkxkxpCkxpCkxkxkxkxpCpCpCpCpCpCpCpCpCpCpCpCpCkxkxkxggggkxkxkxkxkxkxkxkxpCkxkxpCkxY8pCpCpCpCpCpCpCpCkxpCkxkxkxggggkxkxkxkxkxkxpCpCpCkxpCpCLLLLpCpCpCpCtTpCpCpCpCkxkxkxkxggkxkxkxpCpCpCpCpCpCpCpCpCggLLPctTpCpCtTpCpCpCpCpCpCpCkxkxcPcPggggggkxkxkxkxkxkxkxkxcPggY8kxY8pCpCpCpCkxkxkxkxkxkxkxY8Y8cPcPggggggggggggkxggxkxkxkggcPcPY8ggLLLLkxggggggggggggY8Y8cPY8cPggcPcPcPcPcPggkxtTxkCpkxkxkxkxggkxggggcPcPcPcPcPTtY8Y8Y8Y8cPcPcPY8cPcPcPggxkCpCpggggggggggggcPcPcPcPcPcPcPTtTtY8Y8Y8Y8Y8cPY8Y8Y8cPcPTtCpCpCpcPcPcPcPcPY8Y8cPY8Y8Y8Y8Y8Y8Y8TtY8Y8Y8Y8Y8TtY8CpH4pCCpCpLLcPcPcPY8Y8Y8TtY8TtY8TtTtcPcPTtTtTtY8Y8TtTtY8Y8CpCppCCpH4H4H4Y8cPcPcPY8Y8TtTtTtTtTtTtY8TtY8TtTtTtPcTtTtPcCpH4kxH4LLH4CpH4Y8cPY8Y8Y8Y8TtTtTtPcY8Y8TtY8TtTtPcY8TtPcPcCpGqH4H4CpCpH4CpY8Y8Y8Y8TtY8TtTtTtPcTtY8TtcPY8PcTtPcPccPTtH4CpCpCpCpCpCpcPY8cPY8cPTtY8TtTtPcPcTtPcTtY8PcY8PcY8Y8cPY8CpCpH4CpCpH4Y8TtY8Y8TtY8TtTtTtPcPcPcTtTtTtTtTtPcTtY8TtTtY8Y8H4H4CpCpLLY8TtTtTtY8TtTtPcTtPcPcLLLLLLPcPcPcPcY8Y8Y8Y8TtY8H4H4CpCpY8Y8TtPcTtTtTtPcPcPcLLPcPcLLLLLLPcLLPcTtLLTtTtTtTtH4CpH4CpPcTtPcPcPcLLPcLLPcLLLLLLLLH4H4LLLLLLPcPcPcPcPcPcPcH4H4CpH4PcPcPcPcPcPcLLLLLLLLH4H4H4H4H4H4H4H4H4H4H4LLLLLLLLH4H4CpCpPcLLLLLLLLLLLLH4H4CpCpCpCpH4H4H4H4H4H4H4H4H4H4H4H4H4CpCpH4LLLLLLLLH4H4H4H4H4H4CpCpCpH4H4H4H4H4H4H4H4H4H4H4H4LLCpCpH4LLH4H4H4H4H4H4H4H4H4CpCpCpH4H4CpH4H4H4H4H4LLH4LLH4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4H4CpCpCpCpCpCpCpH4H4H4H4H4H4H4H4H4H4H4H4H4H4H4CpH4H4H4CpH4CpCpCpCpCpCpCpCpCpH4H4H4H4H4CpH4CpH4CpH4H4CpCpH4H4H4H4CpCpCpCp"},{"src":"https://d262ilb51hltx0.cloudfront.net/max/800/1*Eci6sHQOh1L304_t7prrSQ.jpeg","data":"#62736d800:455,0Rlip/MA5PMjQ/9itTcKYKx/YichkyHMkhogtDkiU9Y9XdghgylDkggRhBpkMShU0dx/PwHu+ZD1400GH2ghxUxlznzm+IgfTvLMYRpTtjgwcPUiYgt/U+I99PUhhT41M2gspPpeLmGnoN+1XHpDTvYRLdUhlDlCgfxThT0s9f9eUzsuo2Y8Tr9WxwldUIh5PoDYL2Pd/lQAYhhEpDgwPu/+kwdDUx0pERY+XY/M/iHGQ2xuDW9GDmYqDHU3tPHNQBYzHfHvUQghpTQ89MAOIC0qQh008axiTpHXh6tPYbHXks9091CnL2HvDgcQYhPcxkgPU8MNQfDwIj0JHw58LHD0cbPnM19HHmQJ4XCXCXDh4IhDLeUQQ9xAgOU7Qe9cER0J9f98Hw034G8WM2HXYKHo4X0GPH4d00ch5795YQ95kgcQTuhBE8I9IiIA0r0ajoGo01HGh6LnLo8WLIbs0c970s8rc9CrtTY9Le4bHuUy9uMhdD0a5Of0TI4001PWxPbo41XpOm029N96PKYAH7XsYO940JLuDuI8UfM79dQP56Y7gO008p010JHLodc5o44ttTCoD6LN8aHc8r8ZPtPrLbHsLtHt9LDcg64ZUQcQPvDecPgiPdTr8sUR01038qXt0J8qTrXqgMLbHLHsHtM7DL4X00PMDLLu4spCgfLe8s4s4rHMPdH4PLTsLbcOPaTaXsDLHK938p4Y8X4X8H40HM97Tv96Ld974s4sTuLL02LcCqPc8pPZodY6otLbDb8Y4X4HCGGG40004b8sCp0a0b02010aY8HdPtH4004X"}];</script>
+    <style>
+
+    html,
+    body {
+        margin: 0;
+        text-align: center;
+        padding: 2.5% 0;
+    }
+    
+    h1 {
+        font-size: 125%;
+        line-height: 1.4;
+        padding: 0 5%;
+    }
+    
+    p {
+        line-height: 1.6;
+        text-align: left;
+        max-width: 36em;
+        padding: 0 5% 1em;
+        display: inline-block;
+    }
+    
+    small {
+        display: block;
+        margin: 0.5em 0;
+        color: #aaa;
+    }
+
+    figure {
+        background: #333;
+        display: inline-block;
+        margin: 5%;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    figure:before {
+        content: attr(data-tint);
+        font-size: 150%;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: white;
+        width: 100%;
+        margin: -0.6em 0 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        opacity: 0;
+        transition: 0.2s ease;
+    }
+
+    figure:active:before {
+        opacity: 0.66;
+        transition: 0.2s 0.1s ease-in;
+    }
+    
+    figure img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        position: relative;
+        z-index: 1;
+        opacity: 0;
+        transition: 0.4s ease;
+    }
+
+    figure canvas {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -ms-filter: blur(32px);
+        -moz-filter: blur(32px); 
+        -webkit-filter: blur(32px);
+        filter: blur(32px);
+    }
+    
+    figure:active img.loaded, figure:active canvas,
+    figure:hover img.loaded,
+    figure.img 
+    { opacity: 0 }
+    
+    figure img.loaded
+    { opacity: 1 }
+    
+    figure:active img.loaded { 
+        opacity: 0;
+        transition: 0.2s ease-out; 
+    }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Reveal JS Demo with Default&nbsp;Options</h1>
+        <p>
+            The combined Reveal JS data transfer-size for these images is <mark>5.71KB</mark>&nbsp;(compressed).
+            Hover an image to display the preview image, press an image to see it’s average color.
+            Image load times have been throttled with 100 to 800ms to emulate mediocre network speed.
+            <small>Images loaded via Imgur, Tumblr, and&nbsp;Medium.</small>
+        </p>
+    </header>
+
+    <script>var reveal = function(document){ "use strict";
+	
+	// # Initialise
+	// Set a class-name when a .canvas() or .image() are used.
+	var classNames = {
+		base: "preview", // Added to every element
+		monochrome: "monochrome", // Added to monochrome images
+	};	
+	
+	// WARNING: Changing following variables might break the library, proceed with caution.
+	var type = "image/jpeg";
+	var pool = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/";
+	var separateData = ",";
+	var separateSize = ":";
+	var tagImg 	   = "img";
+	var tagCanvas  = "canvas";
+	var hexPrefix  = "#";
+	var monoPrefix = "m";
+		
+	// Generate all possible shorthand hex color combinations (#000 – #fff, 4.096 in total).
+	var hexIndex = function(string){ // "0123456789ABCDEF"
+		var length = string.length;
+		var result = [];
+		for (var a = 0; a < length; ++a){
+			for (var b = 0; b < length; ++b){
+				for (var c = 0; c < length; ++c){
+					result.push([ string[a], string[b], string[c] ].join(""));
+				}
+			}
+		}
+		return result;
+	}(pool.substr(0, 16));
+	
+	// Generate a two-byte key for each value in the hexIndex.
+	var keyIndex = function(string){
+		var length = string.length;
+		var result = [];
+		for (var a = 0; a < length; ++a){
+			for (var b = 0; b < length; ++b){
+				result.push([ string[a], string[b] ].join(""));
+			}
+		}
+		return result;
+	}(pool);
+	
+	// Generate a map to pair each key with its hex value and vice versa.
+	var map = function(hexMap, keyMap){
+		for (var i = 0; i < 4096; ++i){
+			var hex = hexIndex[i], key = keyIndex[i];
+			hexMap[hex] = key;
+			keyMap[key] = hex;
+		}
+		return { hex: hexMap, key: keyMap };
+	}({}, {});
+	
+	// Expose public methods
+	return {
+		create: encodeImage,
+		base64: imageToBase64,
+		canvas: imageToCanvas,
+		image: imageToImg,
+		meta: getImageMeta,
+		get support(){ return !!getContext(createImage(tagCanvas)) }
+	};
+
+	
+	// # Public methods
+	// Load an image source URI/URL and generate a data-string from its imageData using canvas.
+	function encodeImage(source, callback, quality, monochrome){
+		
+		var image = createImage(tagImg);
+		image.onload = function(){
+			
+			var width  = image.naturalWidth;
+			var height = image.naturalHeight;
+			var scaled = resize(width, height, quality);
+			var color  = null;
+			
+			var imageData = getData(image, scaled.width, scaled.height);
+			var result = []; // Here go the keys
+			var colorIndex = [ 0, 0, 0 ]; // 
+			var count = 0; // 
+			
+			if (!monochrome){
+				
+				for (var i = 0, length = imageData.length; i < length; i += 4){
+					
+					var a = imageData[i  ];	colorIndex[0] += a;
+					var b = imageData[i+1];	colorIndex[1] += b;
+					var c = imageData[i+2];	colorIndex[2] += c;
+					
+					if (monochrome !== false) monochrome = a === b && b === c;
+					result[count++] = channelToKey(a, b, c);
+				
+				}
+				color = getAverageColor(colorIndex, count);
+				
+			}
+
+			if (monochrome === true){
+				
+				result = [], count = 0; // reset image
+				// scaled.width += 1000; // map preview width to private key-range
+				var getAverage = color === null; // c
+				
+				for (var i = 0, length = imageData.length; i < length; i += 12){
+					
+					var trio = [];
+					for (var pixel = 0; pixel < 12; pixel += 4){
+						
+						var a = imageData[i+pixel  ]; // r
+						var b = imageData[i+pixel+1]; // g
+						var c = imageData[i+pixel+2]; // b
+						
+						trio.push(Math.round((a + b + c) / 3)); // push grayscale value
+						
+						if (getAverage && a){
+							colorIndex[0] += a; // r
+							colorIndex[1] += b; // g
+							colorIndex[2] += c; // b
+						}
+						
+					}
+					result[count++] = channelToKey(trio[0], trio[1], trio[2]);
+					
+				}
+				color = getAverage ? getAverageColor(colorIndex, count * 4) : color;
+				
+			}
+						
+			// Compose the data-string and pass it to a callback function.
+			result = [
+				(monochrome ? monoPrefix : hexPrefix) + color, // Prefix with Average color...
+				width, separateSize, height, separateData, // and dimensions.
+				keyIndex[scaled.width], result.join("") // Image data
+			].join("");
+						
+			callback(result, {
+				width: width,
+				height: height,
+				color: hexPrefix + color,
+				black: hexPrefix + hexToMonochrome(color),
+				monochrome: monochrome
+			});
+			
+		}
+		if (!isBase64(source)) image.crossOrigin = "anonymous";
+		image.src = source;
+		
+	}
+	
+	// Pass a base64-encoded image to the callback
+	function imageToBase64(string, callback, width, height){ 
+		decodeImage(string, callback, width, height); 
+	}
+	
+	// Pass a canvas-element image to the callback
+	function imageToCanvas(string, callback, width, height){ 
+		decodeImage(string, callback, width, height, tagCanvas);
+	}
+	
+	// Pass an img-element to the callback
+	function imageToImg(string, callback, width, height){ 
+		decodeImage(string, callback, width, height, tagImg);
+	}	
+	
+	// Draw a base64-encoded jpeg-image from a data-string created by preview.encode() using canvas.
+	function decodeImage(input, callback, width, height, element){
+		
+		// If a base64-encoded image is passed at this stage its expected to be optimised so it 
+		// won’t affect its quality or resolution.
+		if (isBase64(input)) return encodeImage(input, function(source){
+			decodeImage(source, callback, element, width, height);
+		}, false);
+			
+		// else...
+		// Extract image data from the string parameter.
+		var source = input.split(separateData);
+		var data = source[1].match(/.{1,2}/g);
+				
+		// Extact meta data from the source prefix.
+		var meta = getImageMeta(source[0]);
+		if (!isNaN(width)){
+			if (!isNaN(height)) meta.height = height;
+			else meta.height = Math.round(meta.height * width / meta.width);
+			meta.width = width;
+		}
+		
+		var previewWidth  = keyIndex.indexOf(data.shift());
+		var previewHeight = data.length / previewWidth; // calculate the preview’s height
+		if (meta.monochrome) previewHeight = 0|previewHeight * 3; // compensate for the smaller data.length 
+						
+		// Prepare a html canvas.
+		var canvas = createImage(tagCanvas, previewWidth, previewHeight);
+		var imageData = createData(canvas, previewWidth, previewHeight);
+		
+		// Set the canvas image data.
+		var index = 0, current = 0;
+		if (meta.monochrome) for (var i = 0, length = imageData.data.length; i < length; i += 12){
+			
+			current = keyToChannel(data[index++]);
+			var a = current[0], b = current[1], c = current[2];
+			
+			imageData.data[i  ] = a;
+			imageData.data[i+1] = a;
+			imageData.data[i+2] = a;
+			imageData.data[i+3] = 255;
+			
+			imageData.data[i+4] = b; 
+			imageData.data[i+5] = b;
+			imageData.data[i+6] = b;
+			imageData.data[i+7] = 255;
+			
+			imageData.data[i+8]  = c; 
+			imageData.data[i+9]  = c
+			imageData.data[i+10] = c;
+			imageData.data[i+11] = 255;
+			
+		}
+		else for (var i = 0, length = imageData.data.length; i < length; i += 4){
+			
+			current = keyToChannel(data[index++]);
+			imageData.data[i  ] = current[0];
+			imageData.data[i+1] = current[1];
+			imageData.data[i+2] = current[2];
+			imageData.data[i+3] = 255;
+			
+		}
+		setData(canvas, imageData);
+		
+		// Load and redraw the canvas image to its given dimensions,  
+		// then pass it to the callback as a base64 encoded jpeg-image.
+		var image = createImage(tagImg);
+		image.onload = function(){
+			
+			var result = drawImage(image, meta.width, meta.height);
+			
+			if (element !== tagCanvas) result = result.toDataURL(type);
+			if (element){
+
+				if (element === tagImg){
+					element = createImage(element, meta.width, meta.height);
+					element.src = result;
+					result = element;
+				}
+				
+				var className = classNames.base;
+				if (meta.monochrome) className += " " + classNames.monochrome;
+				result.className = className;
+				
+			}
+			
+			callback(result, meta);
+			
+		}
+		image.src = canvas.toDataURL(type);
+
+	}
+	
+	// Extract meta data from an encoded string.
+	function getImageMeta(string, key){
+		
+		string = string.split(separateData)[0];
+				
+		var dimensions = string.substr(7).split(separateSize);
+		var color = string.substr(1, 6);
+		var monochrome = string[0] === monoPrefix;
+		
+		var object = {
+			width:  dimensions[0],
+			height: dimensions[1],
+			color: hexPrefix + color,
+			black: hexPrefix + hexToMonochrome(color),
+			monochrome: monochrome
+		};
+				
+		return typeof key === "string" ? object[key] : object;
+		
+	}
+
+	
+	// # Private functions
+	// Utilities
+	function isBase64(value){ return /^data:image/.test(value) }
+	
+	function limit(value, min, max){ return value < min ? min : value > max ? max : value }
+	
+	function resize(width, height, quality){
+		
+		if (quality !== false){
+		
+			quality = !isNaN(quality) && limit(quality, 1, 100) || 50;
+			var resolution = quality / 1500;
+			var treshold = quality * 1.28;
+			
+			var ratio = width / height;
+			if (ratio > 1){ 
+				width = Math.round(limit(width * resolution, 6, treshold));
+				height = Math.round(width / ratio);
+			}
+			else {
+				height =  Math.round(limit(height * resolution, 6, treshold));
+				width = Math.round(height * ratio);
+			}
+		
+		}
+		return { width: width, height: height };
+	
+	}
+		
+	// Color
+	function channelToKey(a, b, c){
+		return map.hex[get(a) + get(b) + get(c)];
+		function get(value){ return pool[Math.round(value / 17)] }
+	}
+	
+	function keyToChannel(key){
+		var hex = map.key[key];
+		return [ get(hex[0]), get(hex[1]), get(hex[2]) ];
+		function get(value){ return parseInt(value + value, 16) }
+	}
+	
+	function getAverageColor(average, index){
+		index = !isNaN(index) ? index : 1;
+		var a = average[0] / index, b = average[1] / index, c = average[2] / index;
+		return channelToHex(a) + channelToHex(b) + channelToHex(c);
+	}
+	
+	function channelToHex(channel) {
+		var hex = Math.round(channel).toString(16);
+		return hex.length === 1 ? 0 + hex : hex;
+	}
+	
+	function hexToMonochrome(hex){
+		hex = hex.match(/.{1,2}/g);
+		hex = parseInt(hex[0], 16) + parseInt(hex[1], 16) + parseInt(hex[2], 16)
+		hex = channelToHex(Math.round(hex / 3));
+		return hex + hex + hex;
+	}
+	
+	// Document
+	function createImage(tag, width, height){
+		var image = document.createElement(tag);
+		if (width) image.width = width;
+		if (height) image.height = height;
+		return image;
+	}
+	
+	// Canvas
+	function getContext(canvas){ return canvas.getContext("2d") }
+	
+	function getData(image, width, height){
+		return getContext(drawImage(image, width, height)).getImageData(0, 0, width, height).data;
+	}
+	
+	function setData(canvas, data){
+		getContext(canvas).putImageData(data, 0, 0);
+	}
+	
+	function createData(canvas, width, height){
+		return getContext(canvas).createImageData(width, height);
+	}
+	
+	function drawImage(image, width, height){
+		var canvas = createImage(tagCanvas, width, height);
+		getContext(canvas).drawImage(image, 0, 0, width,  height);
+		return canvas;
+	}
+	
+}(document);</script>
+    <script>"use strict";
+    !function(){ // generate demo page
+
+        for (var i = 0, length = manifest.length; i < length; ++i){
+
+            render(manifest[i], create("figure"), create("img"));
+
+        }
+
+        function render(image, figure, img){
+            
+            var timeout = limit(Math.round(Math.random() * 800), 100, 800);
+            
+            var color = reveal.meta(image.data, "color");
+            figure.style.backgroundColor = color;
+            figure.setAttribute("data-tint", color);
+
+            reveal.canvas(image.data, function(canvas, color, width, height){
+
+                img.width  = width;
+                img.height = height;
+               
+                img.onload = function(){
+                    setTimeout(function(){ img.classList.add("loaded") }, timeout);
+                }
+                img.src = image.src;
+
+                figure.appendChild(img);
+                figure.appendChild(canvas);
+
+                document.body.appendChild(figure);
+
+            });
+
+        }
+        function create(tag){ return document.createElement(tag) }
+        function limit(n, min, max){ return n < min ? min : n > max ? max : n }
+
+    }();        
+    </script>
+</body>
+</html>
