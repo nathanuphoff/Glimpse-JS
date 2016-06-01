@@ -1,6 +1,6 @@
 Reveal JS is a dependency-free image library to create image previews that load in an instant. 
 
-Inspiration was drawn from Facebook and Medium where tiny placeholder images are rendered blurry, until the actual full-size completes loading. This technique greatly reduces perceived load time, and gives page visitors a glimpse of an image instead of a blank space.
+Inspiration was drawn from [Facebook](https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/) and Medium where tiny placeholder images are rendered blurry, until the actual full-size completes loading. This technique greatly reduces perceived load time, and gives page visitors a glimpse of an image instead of a blank space.
 
 Image previews are encoded with a propitiatory data-string optimised for compression. Alternatively, a base64-encoded image can be passed to the image-decoding methods. While encoding image previews, optional parameters can be set for image quality, and conversion to monochrome.
 
@@ -21,7 +21,7 @@ A simple test with 23 coloured images (3.5MB) lead to a combined preview transfe
 
 # Usage
 ## Creating a preview image
-An image preview is created using `reveal.create()`, the encoded string passed to a callback function, from where it can be uploaded the server to be stored. 
+An image preview is created using `reveal.create()`, the encoded string passed to a callback function, from where it can be uploaded to the server to be stored. 
 
 Alternatively, an existing base64-encoded thumbnail image can be passed to an image decoding method (below), which leads to the same result.
 
