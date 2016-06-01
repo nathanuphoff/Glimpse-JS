@@ -7,7 +7,10 @@ Image previews are encoded with a propitiatory data-string optimised for compres
 To blur a preview image CSS filter-support is required. 
 
 # Demo
-Coming soon...
+[Default options](http://f.cl.ly/items/1d2X0O220z1K3M1H1i0Y/demo-default.html)
+[Black & White](http://f.cl.ly/items/2p3n3F330S012b0d2c27/demo-monochrome.html)
+
+Demo’s hosted on CloudApp with images linked from Imgur, Medium, and Tumblr.
 
 # How it works
 While creating preview a source image is loaded, scaled down and drawn to a canvas. The RGB value for each pixel is encoded to a two-byte key that maps to a hex shorthand code (#000–#fff) which result in 4.096 color combinations. If an image is monochrome, a single key is used for three pixels.
@@ -18,11 +21,11 @@ A simple test with 23 coloured images (3.5MB) lead to a combined preview transfe
 
 # Usage
 ## Creating a preview image
-An image preview is created using reveal.create(), the encoded string passed to a callback function, from where it can be uploaded the server to be stored. 
+An image preview is created using `reveal.create()`, the encoded string passed to a callback function, from where it can be uploaded the server to be stored. 
 
 Alternatively, an existing base64-encoded thumbnail image can be passed to an image decoding method (below), which leads to the same result.
 
-```
+```javascript
 // Using a URL...
 reveal.create("/image.jpg", callback);
 
@@ -32,12 +35,12 @@ reveal.create(base64, callback);
 // Preview quality and monochromatic conversion can be set with the third and fourth parameters...
 reveal.create("/image.jpg", callback, quality, monochrome);
 ```
-The quality parameter expects a number between 0 and 100 which defaults to 50. 
+The `quality` parameter expects a number between `0` and `100` which defaults to `50`. 
 
-The monochrome parameter expects a boolean. Using monochrome preview images reduces the string size even further. If monochrome is set to true, all images will be rendered in black and white. Already monochrome images will automatically be detected and encoded accordingly. If monochrome is set to false, all images will be rendered in RGB regardless of whether the image has color (not advised).
+The `monochrome` parameter expects a boolean. Using monochrome preview images reduces the string size even further. If monochrome is set to `true`, all images will be rendered in black and white. Already monochrome images will automatically be detected and encoded accordingly. If `monochrome` is set to `false`, all images will be rendered in RGB regardless of whether the image has color (not advised).
 
 The callback arguments are a propitiatory encoded data-string, and an object containing meta-data.
-```
+```javascript
 function callback(image, meta){
 	// image {string}: an image data-string.
 	// meta {object}: {
@@ -55,13 +58,13 @@ Reveal JS has three methods for generating an image from an encoded data-string.
 
 Methods to decode a preview image are; .base64(), .canvas(), and .image(). These methods are identical except for the first argument passed to the callback function.
 
-- reveal.base64() passes a base64-encoded string,
-- reveal.image() passes a img-element,
-- and reveal.canvas() passes a canvas-element.
+- `reveal.base64()` passes a base64-encoded string,
+- `reveal.image()` passes a img-element,
+- and `reveal.canvas()` passes a canvas-element.
 
 If an element is passed, the element width, height, and class attributes are set according to the image properties.
 
-```
+```javascript
 // Using a propitiatory string...
 reveal.image(reveal64, callback);
 
@@ -75,7 +78,7 @@ By default the dimensions of the original image are set as the width and height 
 
 
 The callback arguments are a propitiatory encoded data-string, and an object containing meta-data.
-```
+```javascript
 function callback(result, meta){
 	// result {string || element}: an base64-encoded image or an element depending on the method used.
 	// meta {object}: {
@@ -92,7 +95,7 @@ function callback(result, meta){
 To get the image properties a Reveal JS data-string can be passed to `reveal.meta(string)`. This returns an object with the image meta data. The object is identical to the meta-object passed to method callback functions.
 
 ## Checking for browser support
-Reveal JS relies on canvas support, this can be checked using `reveal.support`.
+Reveal JS relies on `canvas` support, this can be checked using `reveal.support`.
 
 # Performance
 Coming soon...
