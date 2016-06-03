@@ -1,10 +1,12 @@
-Reveal JS is a dependency-free image library to create image previews that load in an instant. 
+Glimpse JS is a dependency-free image library to create image previews that load in an instant. 
 
 Inspiration was drawn from [Facebook](https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/) and Medium where tiny placeholder images are rendered blurry, until the actual full-size completes loading. This technique greatly reduces perceived load time, and gives page visitors a glimpse of an image instead of a blank space.
 
 Image previews are encoded with a propitiatory data-string optimised for compression. Alternatively, a base64-encoded image can be passed to the image-decoding methods. While encoding image previews, optional parameters can be set for image quality, and conversion to monochrome.
 
 To blur a preview image CSS filter-support is required. 
+
+> Glimpse JS was formerly known as Glimpse JS, but it has come to my attention this name was already taken by an established library.
 
 # Demo
 [Default options](http://f.cl.ly/items/1d2X0O220z1K3M1H1i0Y/demo-default.html)
@@ -21,19 +23,19 @@ A simple test with 23 coloured images (3.5MB) lead to a combined preview transfe
 
 # Usage
 ## Creating a preview image
-An image preview is created using `reveal.create()`, the encoded string passed to a callback function, from where it can be uploaded to the server to be stored. 
+An image preview is created using `glimpse.create()`, the encoded string passed to a callback function, from where it can be uploaded to the server to be stored. 
 
 Alternatively, an existing base64-encoded thumbnail image can be passed to an image decoding method (below), which leads to the same result.
 
 ```javascript
 // Using a URL...
-reveal.create("/image.jpg", callback);
+glimpse.create("/image.jpg", callback);
 
 // ...or base64-encoded string.
-reveal.create(base64, callback);
+glimpse.create(base64, callback);
 
 // Preview quality and monochromatic conversion can be set with the third and fourth parameters...
-reveal.create("/image.jpg", callback, quality, monochrome);
+glimpse.create("/image.jpg", callback, quality, monochrome);
 ```
 The `quality` parameter expects a number between `0` and `100` which defaults to `50`. 
 
@@ -54,25 +56,25 @@ function callback(image, meta){
 ```
 
 ## Decoding a preview image
-Reveal JS has three methods for generating an image from an encoded data-string. It accepts both a Reveal JS propitiatory string and a base64-encoded image, note that the latter does not affect the dimensions (quality) of the preview image.
+Glimpse JS has three methods for generating an image from an encoded data-string. It accepts both a Glimpse JS propitiatory string and a base64-encoded image, note that the latter does not affect the dimensions (quality) of the preview image.
 
 Methods to decode a preview image are; .base64(), .canvas(), and .image(). These methods are identical except for the first argument passed to the callback function.
 
-- `reveal.base64()` passes a base64-encoded string,
-- `reveal.image()` passes a img-element,
-- and `reveal.canvas()` passes a canvas-element.
+- `glimpse.base64()` which passes a base64-encoded string,
+- `glimpse.image()` which passes a img-element,
+- and finally `glimpse.canvas()` which passes a canvas-element.
 
 If an element is passed, the element width, height, and class attributes are set according to the image properties.
 
 ```javascript
 // Using a propitiatory string...
-reveal.image(reveal64, callback);
+glimpse.image(glimpse64, callback);
 
 // ...or base64-encoded string.
-reveal.image(base64, callback);
+glimpse.image(base64, callback);
 
 // Optionally the width and height can be overridden for the resulting preview image.
-reveal.create("/image.jpg", callback, width, height);
+glimpse.create("/image.jpg", callback, width, height);
 ```
 By default the dimensions of the original image are set as the width and height which leads to faster rendering by the browser.
 
@@ -92,10 +94,10 @@ function callback(result, meta){
 ```
 
 ## Retrieving image meta-data
-To get the image properties a Reveal JS data-string can be passed to `reveal.meta(string)`. This returns an object with the image meta data. The object is identical to the meta-object passed to method callback functions.
+To get the image properties a Glimpse JS data-string can be passed to `glimpse.meta(string)`. This returns an object with the image meta data. The object is identical to the meta-object passed to method callback functions.
 
 ## Checking for browser support
-Reveal JS relies on `canvas` support, this can be checked using `reveal.support`.
+Glimpse JS relies on `canvas` support, this can be checked using `glimpse.support`.
 
 # Performance
 Coming soon...
