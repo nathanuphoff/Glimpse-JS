@@ -1,4 +1,4 @@
-var reveal = function(document){ "use strict";
+var glimpse = function(document){ "use strict";
 	
 	// # Initialise
 	// Set a class-name when a .canvas() or .image() are used.
