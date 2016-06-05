@@ -6,7 +6,7 @@ Image previews are encoded with a propitiatory data-string optimised for compres
 
 To blur a preview image CSS filter-support is required. 
 
-> Glimpse JS was formerly known as Glimpse JS, but it has come to my attention this name was already taken by an established library.
+> Glimpse JS was formerly known as Reveal JS, but it has come to my attention this name was already taken by another established library.
 
 # Demo
 [Default options](http://f.cl.ly/items/1d2X0O220z1K3M1H1i0Y/demo-default.html)
