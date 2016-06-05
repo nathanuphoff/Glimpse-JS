@@ -9,10 +9,12 @@ To blur a preview image CSS filter-support is required.
 > Glimpse JS was formerly known as Reveal JS, but it has come to my attention this name was already taken by another established library.
 
 # Demo
-[Default options](http://f.cl.ly/items/1d2X0O220z1K3M1H1i0Y/demo-default.html)
-[Black & White](http://f.cl.ly/items/2p3n3F330S012b0d2c27/demo-monochrome.html)
+[Default options](http://f.cl.ly/items/1d2X0O220z1K3M1H1i0Y/demo-default.html) & 
+[Black & White](http://f.cl.ly/items/2p3n3F330S012b0d2c27/demo-monochrome.html).
 
-Demo’s hosted on CloudApp with images linked from Imgur, Medium, and Tumblr.
+And a [screencast demonstrating the perceived performance increase](http://cl.ly/gKvV) on a slow (throttled) connection.
+
+Demo’s are hosted on CloudApp with images linked from Imgur, Medium, and Tumblr.
 
 # How it works
 While creating preview a source image is loaded, scaled down and drawn to a canvas. The RGB value for each pixel is encoded to a two-byte key that maps to a hex shorthand code (#000–#fff) which result in 4.096 color combinations. If an image is monochrome, a single key is used for three pixels.
