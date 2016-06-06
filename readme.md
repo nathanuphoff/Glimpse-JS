@@ -23,6 +23,11 @@ While decoding an image the keys are mapped to their respective color values. Th
 
 A simple test with 23 coloured images (3.5MB) lead to a combined preview transfer size of 9KB compressed. Because its a string all 23 images can be transferred as a single file.
 
+## Powered by StackBlur
+[StackBlur](https://github.com/flozz/StackBlur) is a fast almost Gaussian Blur For Canvas by [flozz](https://github.com/flozz). As if now its blur method has been embedded to Glimpse JS for performance reasons, see [the commit details](https://github.com/flozz/StackBlur) for more information. 
+
+> This is an experimental feature for now, to try it use glimpse.blur.js. Nothing has changed to the library interface. To disable the built in StackBlur filter simply remove the method at the bottom of the file.
+
 # Usage
 ## Creating a preview image
 An image preview is created using `glimpse.create()`, the encoded string passed to a callback function, from where it can be uploaded to the server to be stored. 
