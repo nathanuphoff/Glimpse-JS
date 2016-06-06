@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Glimpse JS Demo - Black & White</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+    var manifest = [{"src":"https://i.imgur.com/1QfmBQQ.jpg","data":"m796d5d614:409,0Kkwggdyo+wNcypRkvhjPNHqlMgxoxgfLL9rP4JudDkgr8XqCtj4EjthgqML5c9bXKZU+Q+aSYWhOZj3RxglHt8HB82CDExAZbCZP6k32MF/YMwLT0Cm5fIFpSkg+ITdHo1bBzlNkUzcAMXgK/VglNkF/qT4Cl/u+zddXj/////swg"},{"src":"https://i.imgur.com/NiS7IEI.jpg","data":"m544d45570:375,0JTsQ5XeTdrbPtTLPLLLAPacPbTMPcLLUsb8PLLbPMPdTdKtPbTcPcPIHMP5IcHPPdg7O7X38aP5TdY7Y4GbLZ9vkgcgggaqDaCXYQcAfuc15bH5EAkfXuTeLNH38PY7PpTMDbGpCvP4HKLKH4L38bf6PMYgggfY93M8cO"},{"src":"https://i.imgur.com/2Na9toD.jpg","data":"m6b59521620:1080,0scPcPgxkfkQc8POg9YQgQgxgeUQgPcecPc8YQgfghgOPfcPgggfYhcgcggQcgg8XuY8YPY7Y8ggYhcPcekfghgvUPcDowghbuY6UAUAcdPcQ8kvgQcfcOcMY8cgYfcQXuYfc9bvf+oLcOg7cQgBgfgggfcfccPrXwggXtY6TtYPgicAUAgPYQUQowYhkfgPcPcMUOYAggTMUuZCkCg9kgkggPgfgfggYfc8YdMgggghY8U8gRovchk9gBcxgPc8gQchgucOYMUhgRk7PgcPguggXibfc7cgghXvTfcsgxcxlQgucRjubeTtUAcNPjcQXLUfkfL6UNQKXhcgnvkgc9QfTtPcLNc8MEXsPcU6TuPbYfcgggYBgicQY4IdPdM9XuUAVDUcDMP8PuGrLNLcPOMQpBlBfqHbPgY7PdQNHxY5P4QAc6D4bvgMgNYAofofPYHKU8T3D4HMITmIXcUSY9PecLUgXxgxcgkOLMM5PtKpCpHcTgvNvZYPUOftTeTfcecik9c7LObKHNCpCrTrTptOs4T4PcjZY5ULXvdPXuTLLMGpD3D5PsLrD3Fes4X4GqXMQrTsD6cPQMTbLrCrP2TLH4HaH6TkXvY3HKH3kRgdQLUwXrX5LcGqOpCZ8pD4HtIdwdU3Q4MAk9YxEeMeXMD4TJD5L38Y8qHLP9HeRJYMHBffXqbgXOfuXL8LL5H4L48YGoDMQ9I6VJc9SckOUBfoIOoOXKKpL5PKD48qCIHLLgcMLRUAScTbavobgfsQX6L4HKGpH3CYCqHMLdU6kUkvcKU8Y9cQmuQPTqHKL4CqHKCpH4LMLKkLUdixXqUfDsLwOb6uL6HKHLP5P5HKXKH4LbHaLrXpHMTekvXq8IEbH3PMLLDKLK8oauXKHePuUQYrGbjQP16gGhAdGpDRKqH5HL4cA793DNP8jtQ9QMSX4NbpI+6dKoEPWoHLLKU3E14oHbcfXMHeY9gfh2Xxh8T5LJ8Hb3L4H2HLDMKbTpcPkdTPcOLsIMUhUuM2OdUNCXX4CZD4H4L5TtgAgsbwQvcibicBY+c7PQnfGpL4L5HLLLLNL9ggY7k6ftjBlAQusscuXtgfTtTtTsLMLLPMU8gPcKYvcxR3Sxccd7cOU7U7TtXuTtTtTtTtYgcggQgPcxTILMQDg3LdfuY7TtTtTtU7U7Y8YQgeTtceTdCHX5QiPNTKjuftXtg7XuYgU8YBgQggg49LLgGKGsUfoeQ8g9cvTtXuUBnfk8cKYQghbsGoLKXP8YQLQeQ8cMcPlAg8cgUxfwkQgebt8bL2DI"},{"src":"https://i.imgur.com/WKaRvJA.jpg","data":"m2b1400670:679,0NTtTtTtS0PKH4HMTtTtTtSW00H4CpDMTtTtTt0000H4GpH6TtTtTmG0O4H4H4H7TtTtS90204H4H4HtTtTm000014H4H4TtU8W00000H4H4GtU8Xs000004CpCpDtTsPL00000pCpCpTbLGL00000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"},{"src":"https://i.imgur.com/RXEY1nk.jpg","data":"m5e646e651:1200,0MLcPdTtTtTtTsPcLcTtU8Y8Y8Y7TsPdTuY8Y9cPc8Y8TtU8YPcPcPcPcPY8U8cPcggggggfcPY9cQggkxkxkwgfcOcQghkxkykxkxgfcggxlCpCpCpBkwggkxpCtTtTtCpBkwkxpDtTtTtTtSoxkypDtUxkxkxTtCoypTtkxkxkxkLTpCpDr5xkx//kL3tSpDteXV////sbJjtDtkQLV/x/uq9+xTtUwMDCdAfaDrxjtUxcX3cQkJ94VkxTxknKENULQMGkxjtk/JPtXgg28h/ktkxo8re6Kp4H7+xTxl8ZPKf3CX4UxjtkypCqhgCY4oxktUxiWZFJ734NFkxTxksdFCpRXICkxjtUxeYxexkM8YxjtTtjgiCsGZGYFUtStUjvXJGo4Y8ZtSpTseD4Co8Y8XFSpCt5g58X4HOfXSpBpBQNan8H8ZCYFBkykMP68Y4J8o8KkhkwXLKZ4o8qCYAgggX4L38J4sGo8bcggNH2H6DL928YA9c8TbCaD1GoCY8eYOTrTJKpCY8o8YU8XbPKDYCoCZ8Y9tTdPJDID18Y8Y8cPrPKGpGo8Z8Y8YLcHKKYD2CoCY8Y"},{"src":"https://i.imgur.com/MvhEZ.jpg","data":"m989086395:540,0D1uwBg9ciqExkxkxkdWwkhkvyhk3kxkxfxkuExkxkdkxWxkxkvkxk3kxkxbdUuExipENktWwyx8suu+3ipbvUcEmAdkpkxc/WlixkoEwN3kLBxkw+i9xdvjxAw0lZhkxkx628xdwExkeBwjp8xUw0xkxkVdSk"},{"src":"https://66.media.tumblr.com/9a907a73d4d2b8d500683aa0e4a6c5c4/tumblr_o4unhlCDgy1qhvtlqo1_1280.jpg","data":"m7c7c7c858:1280,0TtUxkxkxkxkxkxkxkxjtUxjxkxkxkxkxkxkxjxTtTxkxkxkxkxkxkxkxkxTxkxkxkxkxkxk/kxkxjtTxkxkxkxkxkxkxkxkxjtkxkxkxkxkxkxkxkxkxjxkxkxkxkxkxkxkxkxTxUxkxk/kxkxlxkxkxktjxkxkxkxkxkxlxkxkxkxkxkxkxkx+xkxkxkxkxkxkxkxTxkxUxkxkxkxkxUtktTtUtjtTxkxkxkxjtTtjtTtTtTtTxjxjxTtTtTtSpCpTtTtTtTtTtTtTpCpSpCpDpTtTtTtTtTpClCpCpCpCpCtTtTtTtCpAkxlCpCpCpCpTtStCpCohkxpClCpCpCpTpCpCpCghkxoykxlCpCpCpCpBkwgxkxkxoxoupCpCpBoxkgkxkxpClCLSpCtCpBkxgxlCpCpCobRSpSpCpCkvcggxkxkxcekCpCkxkxk8cQggghhkwfcALRggggY9YQcPcQlUExkwkgcPcNY8YPc9cQupggggcPcPbtY8Y9Y8cNCpcPcOYOY8Y8U8Y8U3J3DPcOY7XuTvbtU8TuWpmqH8cPY7TtTuU7TsTsDBHKD8c8Y7TsY7XtQ7PZH4CqE8Y7XtTdXvXdPfT3CpCvYObuTsPsU6XeYOCqCqXuXuTtPcTtTsU7U8H3DOTtXtPsPLLcPeY8U4GpY7PtTcPMPLLbPrTtT3GsTcPMLbLLH5LMPcPcH3HcPcPLLKH4H4H4HLLKGpPLLLL4CpD4H4H4H4H3D5LLH4H4CpH4H4H4H4KpHKH4H4H3CqGqH4HKL4H4H4H4H4H4CpCpD4H4H4H4H4GqH3GpCpCpD4H4D3GqGpH4Gp"},{"src":"https://d262ilb51hltx0.cloudfront.net/max/800/1*Eci6sHQOh1L304_t7prrSQ.jpeg","data":"m495651800:455,0RpeMRVNVwgrkzk8UhoglPm/TfCGEkvtcdMSsfgUjrd1MSn3c5o9QSojmsQhU6FRQLH6+ApQVxkYYrlJN38uDiQBPflNHeAGFMISX98oHscMwOU7aNH3XK964YSSQNoNXO5LSG9KT1142aIKgNjdbp9Z0vHIHpGpbDXZQccoLL04nXOnL5bNanTdXbX8a30bc8JJHZOoTbPcHOAPTffcIG4t8sQ5LcT11aOyfaCrT5TPLdH3CY4HL7HaCtKMDZMdfL8H4X0qCY42XdG1"}];
+    </script>
+</head>
+<body>
+    
+    <header>
+        <h1>Glimpse JS Demo in Black&nbsp;&&nbsp;White</h1>
+        <p>
+            The combined Glimpse JS data transfer-size for these images is <mark>3.03KB</mark>&nbsp;(compressed).
+            Hover an image to display the preview image, press an image to see it’s average color.
+            Image load times have been delayed with 400 to 1200ms to emulate mediocre network speeds.
+            <small>Images loaded via Imgur, Tumblr, and&nbsp;Medium.</small>
+        </p>
+    </header>
+
+    <script src="../glimpse.js"></script>
+    <script>"use strict";
+    !function(){ // generate demo page
+
+        for (var i = 0, length = manifest.length; i < length; ++i){
+            render(manifest[i], create("figure"), create("img"));
+        }
+
+        function render(image, figure, img){
+            
+            var timeout = limit(Math.round(Math.random() * 1200), 400, 1200);
+            
+            var color = glimpse.meta(image.data, "black");
+            figure.style.backgroundColor = color;
+            figure.setAttribute("data-tint", color);
+
+            glimpse.canvas(image.data, function(canvas, color, width, height){
+
+                img.width  = width;
+                img.height = height;
+               
+                img.onload = function(){
+                    setTimeout(function(){ img.classList.add("loaded") }, timeout);
+                }
+                img.src = image.src;
+
+                figure.appendChild(img);
+                figure.appendChild(canvas);
+
+                document.body.appendChild(figure);
+
+            });
+
+        }
+        function create(tag){ return document.createElement(tag) }
+        function limit(n, min, max){ return n < min ? min : n > max ? max : n }
+
+    }();        
+    </script>
+</body>
+</html>
