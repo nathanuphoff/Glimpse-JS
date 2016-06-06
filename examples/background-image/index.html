@@ -1,0 +1,81 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Glimpse JS Demo - Black & White</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="../../glimpse.blur.js"></script>
+</head>
+<body>
+
+    <header id="glimpse" class="page" data-source="header.jpg" data-glimpse="#8750321920:1280,0WjXnmjGjHf1O0K0G040808040C0C0C0G0C0G0G0G0G0G0K0K0K0K0O0O0O0O0K0K0fGSGb0jWfGSWG0G0C080C0C0C0G0G0G0G0G0G0K0K0K0K0O0O0O0O0O0O0SGO0O0nmrnnnnmfGWnG0G080G0G0G0G0OGG0K0K0K0K0K0O0OGO0OGSGOGOGOGSGSGOGOGWWSGamnXfHWnK0G0C0G0G0G0K0rX00f1OWOWOGOGSGSWSWSWSWSWSWSWSWSWSWOWjWnnf00000b0K0G0C080G00000roG0wXSmWmSmSmWmWmWmWmWmWmWmWmWmWWSWSWnms0wG00zmKGK000C0+0K000C0jHC0WmWmb0Wmb0b0b0b0b0b0W0r2b0WmWmWmWWnms0000040b0O00000K0WW00nWG0G0OWSmfGfGjGnG/z/a///+////fGb0WmWmWmnms0000000b00000vXK00000C0G0OWSmbG/z/////////////////CjGb0b0b0Wmnms0000000000000+GK08040WGKGOmbGfW/////////////////+s1jGfGb0b0Wmnms0000000000000S0jYSG40S0KGSmbGsH//////////////////nmjWfGb0b0b0nms000000000004000+WK040G0OWSmbGk0//////////////////nWjGfGb0b0b0nms000000040000000S0C0G0G0KGOmX0fm//////////////////jGjGfGb0b0b0nmnm0000XXO0C00000SHO0C080C0K0OmbG//////////////////fGjGfGb0b0b0nmnm0000b0G0C00000rmK0004080G0OWbG//////////////////f0fGfGbGb0b0nmnm00OmWmC08000G0G0G0000000C0KGbG//////////////////b0fGbGbGb0b0s0s00000SW000000/K0000000000G0OWfW////////o5////////amfGbGf0b0b0fGf000THK0C0G000G00000000000G0OGbG//////////////////WWSmOGO0K0K0SWWW8000O0S0am00eWn0n0000000SW80K0rG/e/s/k//////////SGSWO0K0K0G0WWem0000SGn00100fG+0+0000000/obIOG///////y/nSHj0imwnSWO0K0G0G0C0WGO00040rGrWaG0000nX+0000000inC0rZ/////////////////x+GemG0G0C040WWO0G0O0W0aWvWrGzmvmrG00O0WWo4///////////////////////1+GvmrGemO0">
+        
+    </header>
+
+    <script>
+    "use strict";
+        
+    //
+    glimpseBackground('#glimpse');
+    
+    
+    // 
+    function glimpseBackground(id){
+        
+        if (/^#/.test(id) === false) return console.error("An element id is required");
+        
+        var element = document.querySelector(id);
+        var glimpseData = element ? element.getAttribute('data-glimpse') : false;
+        
+        if (glimpseData){
+            
+            // Retrieve and style the background-color
+            element.style.backgroundColor = glimpse.meta(glimpseData, 'color');
+            
+            // Create and style the background-image
+            glimpse.base64(glimpseData, function(base64Image){
+                
+                // Set the base64 image as the background-image for the :after pseudo-element.
+                styleSelector(id + ":after", { 'background-image': "url(" + base64Image + ")" });
+                
+                // Set a class for the element when the glimpse is complete.      
+                element.classList.add("glimpsed");
+                
+                // Reveal the image if its present
+                var source = element.getAttribute('data-source');
+                if (source){
+                    var image = create('img');
+                    image.onload = function(){ element.classList.add("loaded") }
+                    image.src = source;
+                }
+                
+            });
+                
+        }
+            
+    }
+    
+    function styleSelector(selector, style){
+                
+        var element = create('style');
+        var content = [ selector + "{" ]; // selector and opening bracket
+        
+        for (var property in style) if (style.hasOwnProperty(property)){
+            content.push(property + ":" + style[property] + ";");
+        }
+        
+        element.setAttribute('rel', "stylesheet");
+        element.setAttribute('type', "text/css");
+        element.textContent = content.join("") + "}";
+        
+        document.head.appendChild(element);
+        
+    }
+
+    function addClass(element, className){ element.classList.add(className) }
+    
+    function create(tag){ return document.createElement(tag) }
+
+    </script>
+</body>
+</html>
