@@ -419,7 +419,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 glimpse.blur = function(imageData, width, height){
 	
 	var radius = 0|(Math.sqrt(width * 10));
-	if (radius > 150) radius = 150;
+	if (radius > 120) radius = 120;
 	
 	var mul_table = [
 		512,512,456,512,328,456,335,512,405,328,271,456,388,335,292,512,
